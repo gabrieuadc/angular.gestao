@@ -1,0 +1,34 @@
+<form class="form" [formGroup]="cadCustos">
+  <h1>Cadastro de Custos</h1><br/>
+
+<mat-form-field appearance="fill">
+  <mat-label>Centro de custos</mat-label>
+  <input matInput formControlName="cc" type="text">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Mão de obra direta</mat-label>
+  <input matInput formControlName="mod" type="number" ng-reflect-is-disabled="true">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label >Material direto</mat-label>
+  <input matInput formControlName="md" type="number">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>CIF</mat-label>
+  <input matInput formControlName="cif" type="number">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Custo de produção</mat-label>
+  <input matInput formControlName="cpp" type="number">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Exercicio</mat-label>
+  <input matInput formControlName="exercicio" type="month">
+</mat-form-field>
+
+<div class="example-button-row">
+
+  <button mat-raised-button color="primary">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="postCcusto()">Gravar</button>
+</div>
+</form><br><br><br><br>

@@ -1,0 +1,29 @@
+<div style="background-color: #3f51b5;">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/">Home</button>
+    <button mat-menu-item routerLink="/cadAndamento">Serviços</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="belowMenu">Gestão</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item routerLink="/cadCustos">Custos</button>
+  <button mat-menu-item routerLink="/fluxoCaixa">Fluxo de caixa</button>
+  <button mat-menu-item routerLink="/gestaoFluxo">Impostos</button>
+</mat-menu>
+
+</div>
+
+<!-- <div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div> -->
+
+
+<router-outlet></router-outlet>
+<footer style="position: fixed; bottom: 0; flex-direction: column; align-items: center; ">
+  <p>Criado por Gabriel Diniz Machado</p>
+</footer>

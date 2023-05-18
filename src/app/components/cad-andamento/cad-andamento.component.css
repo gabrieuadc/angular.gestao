@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+  }
+  tr.mat-mdc-footer-row td {
+    font-weight: bold;
+  }
+
+  /* // verificaData(){
+    //   console.log(this.filter);
+    // } 
+    // verificaData(filter, this.services)
+    // verificaValor(){
+    //   var sum:number;
+    //   return sum = this.services.reduce((accumulator,object) => {  if (object.value === undefined) {return accumulator}; return accumulator+ object.value},0)
+    // } 
+    
+    // getTotalCost() {
+    //   return this.services.map(t => t.value).reduce((acc, value) => { if(value === undefined) {return acc}; return acc + value},0);
+    // }
+    
+    // getTotalobj() {
+    //   return this.services.map(t => t.name).length;
+    // } */

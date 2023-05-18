@@ -1,0 +1,148 @@
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+  <mat-tab label="Gestao de custos">
+    <br>
+    <button mat-raised-button color="primary" (click)="openDialog()">Novo Custo</button>
+    <br>
+    <br>
+
+    <br/><br/>
+    <input matInput type="month">
+    <mat-hint align="start"> // Filtro de vigência    </mat-hint>
+    <button mat-raised-button color="primary">Filtrar vigência</button>
+    <br/><br/>
+    <div class="example-form-fields">
+      <table mat-table [dataSource]="custos" class="mat-elevation-z8">
+    
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+    
+        <ng-container matColumnDef="Ccusto">
+          <th mat-header-cell *matHeaderCellDef> Centro de custo </th>
+          <td mat-cell *matCellDef="let element">{{element.cc}}</td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="mod">
+          <th mat-header-cell *matHeaderCellDef> Mão de obra direta </th>
+          <td mat-cell *matCellDef="let element">{{element.mod}}</td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="md">
+          <th mat-header-cell *matHeaderCellDef> Máteria prima direta </th>
+          <td mat-cell *matCellDef="let element">{{element.md}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="cif">
+          <th mat-header-cell *matHeaderCellDef> Custo indireto de fabricação </th>
+          <td mat-cell *matCellDef="let element"> {{element.cif}}</td>
+        </ng-container>
+    
+        <ng-container matColumnDef="cpp">
+            <th mat-header-cell *matHeaderCellDef> Custo de produção </th>
+            <td mat-cell *matCellDef="let element"> {{element.cpp}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="exercicio">
+            <th mat-header-cell *matHeaderCellDef> Exercicio </th>
+            <td mat-cell *matCellDef="let element"> {{element.exercicio}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let element"><button mat-icon-button color="warn" (click)="openDialogEdit()"><mat-icon>editsquare</mat-icon></button><button mat-icon-button color="warn" (click)="deleteCCusto(element.id)"><mat-icon>delete</mat-icon></button> </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+      <!-- <button mat-raised-button color="warn" (click)="deleteCCusto(element.id)">Excluir</button> </td> -->
+    
+      <!-- <ng-container>
+        <th>Ações
+             </th>
+             <td>
+               <div>
+                 <button mat-stroked-button class="m-2" color="accent">
+                   Editar
+                 </button>
+                 <button mat-stroked-button class="m-2" color="warn">
+                   Excluir
+                 </button>
+               </div>
+             </td>
+     </ng-container> -->
+    </div>
+
+
+  </mat-tab>
+
+  <div>
+    <mat-tab label="Relatórios">
+        <br/><br/>
+        <input matInput type="month">
+        <mat-hint align="start">/// Vigência</mat-hint>
+        <br/><br/>
+        <input matInput type="text">
+        <mat-hint align="start">   Centro de custo</mat-hint>
+        <br/><br/>
+        <button mat-raised-button color="primary">Filtrar</button>
+
+
+    </mat-tab>
+  </div>
+</mat-tab-group>
+  
+  
+<!-- <form class="form" [formGroup]="cadCustos">
+  <h1>Cadastro de Custos</h1><br/>
+
+<mat-form-field appearance="fill">
+  <mat-label>Centro de custos</mat-label>
+  <input matInput formControlName="cc">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Mão de obra direta</mat-label>
+  <input matInput formControlName="mod" type="number" ng-reflect-is-disabled="true">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label >Material direto</mat-label>
+  <input matInput formControlName="md" >
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>CIF</mat-label>
+  <input matInput formControlName="cif" type="number">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Custo de produção</mat-label>
+  <input matInput formControlName="cpp" type="number">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Exercicio</mat-label>
+  <input matInput formControlName="exercicio" type="month">
+</mat-form-field>
+
+<div class="example-button-row">
+
+  <button mat-raised-button color="primary" (click)="resetForm()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="postCcusto()">Gravar</button>
+</div>
+</form><br><br><br><br> -->
+
+
+  <!-- <div>
+    <button mat-icon-button color="warn" (click)="decrementID()"><mat-icon >west</mat-icon ></button>
+    <button mat-icon-button color="warn" (click)="incrementID()"><mat-icon >east</mat-icon></button>
+  </div> -->
+  <br/><br/>
+  <!-- <input matInput type="number" value="{numObj}">
+  <mat-hint align="start"> // ID    </mat-hint> -->
+
+<!-- <mat-form-field appearance="fill">
+  <mat-label>ID</mat-label>
+  <input matInput formControlName="id" >
+</mat-form-field> -->

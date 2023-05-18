@@ -1,0 +1,101 @@
+<div >
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <div>
+    <mat-tab label="Fluxo">
+      <form class="form1" >
+        <h1>Fluxo de Caixa</h1>
+    <mat-form-field appearance="fill" >
+        <mat-label>(+) Recebimento de clientes</mat-label>
+        <input matInput type="number" name="clientes" [(ngModel)]="clientes" required >
+    </mat-form-field>
+      <mat-form-field>
+        <mat-label>(-) Pagamento de fornecedores</mat-label>
+        <input matInput type="number" name="fornecedores" name="fornecedores" [(ngModel)]="fornecedores" required >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label >(-) Despesas administrativas e comerciais{{clientes}}</mat-label>
+        <input matInput type="number" name="despesas" [(ngModel)]="despesas" required >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>(=) Caixa obtido pelas atividades operacionais</mat-label>
+        <input matInput type="number" name="caixaop" [(ngModel)]="caixaop" value="{{caixaop}}" required >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>(-) Compra de ativo</mat-label>
+        <input matInput type="number" name="cativo" [(ngModel)]="cativo" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>(+) Recebimento de dividendos</mat-label>
+        <input matInput type="number" name="recdiv" [(ngModel)]="recdiv" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>(=) Caixa obtido pelas atividades de investimento</mat-label>
+        <input matInput type="number" name="caixainv" [(ngModel)]="caixainv" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>(-) Pagamento de financiamento</mat-label>
+        <input matInput type="number" name="pgfinan" [(ngModel)]="pgfinan" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>(+) Integralização de capital</mat-label>
+        <input matInput type="number" name="intcapital" [(ngModel)]="intcapital" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>(=) Caixa obtido pelas atividades de financeiro</mat-label>
+        <input matInput type="number" name="caixafinan" [(ngModel)]="caixafinan" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>(=) Saldo das disponibilidades</mat-label>
+        <input matInput type="value" name="caixafinan1" [(ngModel)]="saldodisponibilidade" required >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Exercicío</mat-label>
+        <input matInput type="month" name="exercicio" [(ngModel)]="exercicio" required >
+      </mat-form-field>
+    
+      <div class="example-button-row">
+        <button mat-raised-button color="primary"(click)="apuracao()">Apurar</button>
+        <button mat-raised-button color="primary" (click)="postFluxo()">Salvar</button>
+      </div>
+      </form>
+    </mat-tab>
+  </div>
+    <mat-tab label="Gestao">    <input matInput type="text">
+      <mat-hint align="start"> // Filtro de vigência    </mat-hint>
+      <button mat-raised-button color="primary">Filtrar vigência</button><br><br>
+     <ng-container *ngFor="let user of fluxoreceb;" > 
+      <div style="display: inline-flex; width: flex; height: flex;">
+      <mat-card >
+        <mat-card-header>Fluxo de caixa comp {{user.exercicio}}</mat-card-header>
+        <mat-card-content>
+          <br><br>
+          <mat-label>(+) Recebimento de clientes: {{user.clientes}}</mat-label><br>
+          <mat-label>(-) Pagamento de fornecedores: {{user.fornecedores}}</mat-label><br>
+          <mat-label >(-) Despesas administrativas e comerciais: {{user.despesas}}</mat-label><br>
+          <mat-label>(=) Caixa obtido pelas atividades operacionais: {{user.caixaop}}</mat-label><br>
+          <mat-label>(-) Compra de ativo: {{user.cativo}}</mat-label><br>
+          <mat-label>(+) Recebimento de dividendos: {{user.recdiv}}</mat-label><br>
+          <mat-label>(=) Caixa obtido pelas atividades de investimento: {{user.caixainv}}</mat-label><br>
+          <mat-label>(-) Pagamento de financiamento: {{user.pgfinan}}</mat-label><br>
+          <mat-label>(+) Integralização de capital: {{user.intcapital}}</mat-label><br>
+          <mat-label>(=) Caixa obtido pelas atividades de financeiro: {{user.caixafinan}}</mat-label><br>
+          <mat-label>(=) Saldo das disponibilidade:s {{user.fornecedores}}</mat-label><br>
+          <mat-label>Exercicío: {{user.exercicio}}</mat-label>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    </ng-container> 
+
+  </mat-tab>
+  <mat-tab label="Dashboard">Dashborads </mat-tab>
+    
+  </mat-tab-group>
+
+</div>

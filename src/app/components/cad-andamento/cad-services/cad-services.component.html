@@ -1,0 +1,26 @@
+<div ><br><br>
+  <form class="form" [formGroup]="cadServicos">
+    <h1>Cadastro de serviços</h1><br/>
+<mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="name" >
+</mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Contato</mat-label>
+    <input matInput formControlName="contact" type="number">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label >Servico</mat-label>
+    <input matInput formControlName="service" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Valor</mat-label>
+    <input matInput formControlName="value" type="number">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Data</mat-label>
+    <input matInput formControlName="date" type="month">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="poster()">Salvar</button>
+  </form>
+</div>

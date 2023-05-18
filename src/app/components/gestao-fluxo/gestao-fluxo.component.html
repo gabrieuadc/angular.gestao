@@ -1,0 +1,92 @@
+<div>
+    <br><br>
+    <form class="form1" >
+      <h1>Impostos</h1>
+  <mat-form-field appearance="fill" >
+      <mat-label>Receita bruta de vendas</mat-label>
+      <input matInput type="number" name="rbruta" [(ngModel)]="rbruta">
+  </mat-form-field>
+    <mat-form-field>
+      <mat-label>PIS</mat-label>
+      <input matInput type="number" name="pis" [(ngModel)]="pis">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>COFINS</mat-label>
+      <input matInput type="number" name="cofins" [(ngModel)]="cofins">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Exercicío</mat-label>
+      <input matInput type="month" name="exercicio" [(ngModel)]="exercicio">
+    </mat-form-field>
+  
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" (click)="apuracao()">Apurar</button>
+      <button mat-raised-button color="primary" (click)="postImp()">Salvar</button>
+    </div>
+    </form>
+  </div>
+
+  <!-- <form class="form1" >
+    <h1>DR</h1>
+<mat-form-field appearance="fill" >
+    <mat-label>Receita bruta de vendasa</mat-label>
+    <input matInput type="number" name="clientes">
+</mat-form-field>
+  <mat-form-field>
+    <mat-label>Impostos</mat-label>
+    <input matInput type="number" name="fornecedores" name="fornecedores">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Receita liquida</mat-label>
+    <input matInput type="number" name="despesas" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>CMV</mat-label>
+    <input matInput type="number" name="caixaop">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Lucro bruto</mat-label>
+    <input matInput type="number" name="cativo" >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Despesas</mat-label>
+    <input matInput type="number" name="recdiv">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lucro operacional</mat-label>
+    <input matInput type="number" name="caixainv">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lucro antes do ir e csll</mat-label>
+    <input matInput type="number" name="pgfinan">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>IR</mat-label>
+    <input matInput type="number" name="intcapital">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>CSLL</mat-label>
+    <input matInput type="number" name="caixafinan">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lucro Liquido</mat-label>
+    <input matInput type="value" name="caixafinan1">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Exercicío</mat-label>
+    <input matInput type="month" name="exercicio">
+  </mat-form-field>
+
+  <div class="example-button-row">
+    <button mat-raised-button color="primary">Apurar</button>
+    <button mat-raised-button color="primary">Salvar</button>
+  </div>
+  </form> -->

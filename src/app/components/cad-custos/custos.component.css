@@ -1,0 +1,22 @@
+    .example-form-fields {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #input2 {
+        border: none;
+        outline: solid black 1px;
+        color: black;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+      .teste33{
+        /* display: inline-flex; */
+      }
+      
